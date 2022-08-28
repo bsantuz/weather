@@ -59,7 +59,7 @@ function App() {
       setnameCitys("");
 
       Api(
-        `http://api.weatherapi.com/v1/current.json?key=4a6bea95d12445aba57194503222608&q=${checkCityEqual[0]}&lang=pt`, 
+        `https://api.weatherapi.com/v1/current.json?key=4a6bea95d12445aba57194503222608&q=${checkCityEqual[0]}&lang=pt`, 
         (e)=>{
           console.log(e);
           setweatherData(weather(e));
