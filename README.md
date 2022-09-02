@@ -24,8 +24,8 @@
 ### Demostração da Aplicação
 * Digite o nome da cidade no campo de pesquisa.
 * Clique em pesquisar.
-<a href="https://vocal-belekoy-57452d.netlify.app/">Teste a Aplicação</a> 
-<img src="./w-web">
+<br><a href="https://vocal-belekoy-57452d.netlify.app/">Teste a Aplicação</a> 
+<img src="./w-web.png">
 
 ### Como executar o projeto
 Antes de começar, você vai precisar ter instalado em sua máquina um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
