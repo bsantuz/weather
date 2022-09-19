@@ -10,20 +10,18 @@ export default function weather (data){
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-compass-fill" viewBox="0 0 16 16">
                             <path d="M15.5 8.516a7.5 7.5 0 1 1-9.462-7.24A1 1 0 0 1 7 0h2a1 1 0 0 1 .962 1.276 7.503 7.503 0 0 1 5.538 7.24zm-3.61-3.905L6.94 7.439 4.11 12.39l4.95-2.828 2.828-4.95z"/>
                         </svg>
-                        &nbsp;&nbsp;{data.location.name}, {data.location.region}</p>
-                    <p className="col">latitude: {data.location.lat}, longitude: {data.location.lon}</p>
+                        &nbsp;&nbsp;{data.results.city}</p>
                 </div>
                 <div>
-                  {  /*
+                  
                     <div className="row">
                         <p className="col">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-brightness-alt-high-fill" viewBox="0 0 16 16">
                                 <path d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm8 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zm-13.5.5a.5.5 0 0 0 0-1h-2a.5.5 0 0 0 0 1h2zm11.157-6.157a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm-9.9 2.121a.5.5 0 0 0 .707-.707L3.05 5.343a.5.5 0 1 0-.707.707l1.414 1.414zM8 7a4 4 0 0 0-4 4 .5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 4 4 0 0 0-4-4z"/>
                             </svg>
                             &nbsp;&nbsp;Condição climatica:</p>
-                        <p className="col">{data.current.condition.text}</p>
+                        <p className="col">{data.results.description}</p>
                     </div>
-*/}
                     <div className="row">
                         <p className="col">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-thermometer-half" viewBox="0 0 16 16">
@@ -31,9 +29,9 @@ export default function weather (data){
                                 <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"/>
                             </svg>
                             &nbsp;&nbsp;Temperatura:</p>
-                        <p className="col"> {data.current.temperature} °C</p>
+                        <p className="col"> {data.result.temp} °C</p>
                     </div>
-
+{/*
                     <div className="row">
                         <p className="col">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-cloud-fill" viewBox="0 0 16 16">
@@ -51,7 +49,7 @@ export default function weather (data){
                             &nbsp;&nbsp;Precipitação:</p>
                         <p className="col">  {data.current.precip} mm</p>
                     </div>
-
+*/}
                     <div className="row">
                         <p className="col">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-droplet-half" viewBox="0 0 16 16">
@@ -59,9 +57,9 @@ export default function weather (data){
                                 <path fillRule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"/>
                             </svg>
                             &nbsp;&nbsp;Umidade:</p>
-                        <p className="col">  {data.current.humidity} %</p>
+                        <p className="col">  {data.results.humidity} %</p>
                     </div>
-
+{/*
                     <div className="row">
                         <p className="col">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-brightness-high" viewBox="0 0 16 16">
@@ -70,14 +68,14 @@ export default function weather (data){
                             &nbsp;&nbsp;indice UV:</p>
                         <p className="col">  {data.current.uv_index}</p>
                     </div>
-
+    */}
                     <div className="row">
                         <p className="col">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-wind" viewBox="0 0 16 16">
                                 <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"/>
                             </svg>
                             &nbsp;&nbsp;Velocidade do vento:</p>
-                        <p className="col">  {data.current.wind_speed} km/h</p>
+                        <p className="col">  {data.result.wind_speedy}</p>
                     </div>
                 </div>
             </div>

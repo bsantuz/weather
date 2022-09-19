@@ -59,15 +59,27 @@ function App() {
       setnameCitys("");
 
       Api(
-        `http://api.weatherstack.com/current?access_key=76ce59f4f46c47706337126e8c3c140f&query=${checkCityEqual[0]}`, 
+        `https://api.hgbrasil.com/weather?key=af04c7e1&city_name=rio%20de%20janeiro${checkCityEqual[0]}`, 
         (e)=>{
           console.log(e);
           setweatherData(weather(e));
-          if(e.current.weather_descriptions[0] === "Clear" || e.current.weather_descriptions[0] === "Sunny"){
-            setbg("./img/day.png");
-          }else{
-            setbg("./img/rain.png");
+
+          switch (e.result.condition_code) {
+            case 27:
+            case 31:
+            case 32:
+            case 23:
+            case 36:
+            case 44:
+              setbg("./img/day.png");
+              break;
+            case 48:
+              break;
+            default:
+              setbg("./img/rain.png");
+              break;
           }
+
         }
       )
     }else{
