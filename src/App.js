@@ -59,7 +59,7 @@ function App() {
       setnameCitys("");
 
       Api(
-        `https://api.weatherstack.com/current?access_key=76ce59f4f46c47706337126e8c3c140f&query=${checkCityEqual[0]}`, 
+        `http://api.weatherstack.com/current?access_key=76ce59f4f46c47706337126e8c3c140f&query=${checkCityEqual[0]}`, 
         (e)=>{
           console.log(e);
           setweatherData(weather(e));
