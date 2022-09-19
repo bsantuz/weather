@@ -59,14 +59,14 @@ function App() {
       setnameCitys("");
 
       Api(
-        `https://api.weatherapi.com/v1/current.json?key=4a6bea95d12445aba57194503222608&q=${checkCityEqual[0]}&lang=pt`, 
+        `http://api.weatherstack.com/current?access_key=76ce59f4f46c47706337126e8c3c140f&query=${checkCityEqual[0]}`, 
         (e)=>{
           console.log(e);
           setweatherData(weather(e));
-          if(e.current.condition.text === "Sol"){
-            setbg("https://mobimg.b-cdn.net/v3/fetch/f1/f11f378258a05d2eac4938b42045aaf0.jpeg");
+          if(e.current.weather_descriptions[0] === "Clear" || e.current.weather_descriptions[0] === "Sunny"){
+            setbg("./img/day.png");
           }else{
-            setbg("https://thewallpapers.org/zoom/45017/rain-over-the-island.jpg");
+            setbg("./img/rain.png");
           }
         }
       )
@@ -79,7 +79,7 @@ function App() {
   return (
     <React.Fragment>
 
-    <div id="bg" className="vw-100 vh-100 position-fixed top-0" style = {{ zIndex:-2, backgroundImage: `url(${bg})`, backgroundRepeat: "noRepeat", backgroundSize: "cover", filter:"blur(2px)"}}></div>
+    <div id="bg" className="vw-100 vh-100 position-fixed top-0" style = {{ zIndex:-2, backgroundImage: `url(${bg})`, backgroundRepeat: "noRepeat", backgroundSize: "cover"}}></div>
 
     <div className="container-sm d-flex mt-5 justify-content-center">
         <input ip="search" className="form-control me-3" type="text" onChange = { handleFilter } value={inputCity} placeholder="ex. Rio de Janeiro" style = {{maxWidth: 250,}}/>
@@ -94,7 +94,6 @@ function App() {
       { nameCitys}
     </div>
     {weatherData}
-
     </React.Fragment>
   );
 }
