@@ -10,7 +10,7 @@
 <a href="#Como-executar-o-projeto">como Executar</a> • 
 <a href="#Tecnologias-utilizadas">Tecnologias</a> •   
 <a href="#autor">Autor</a> •
-<a href="#licenc-a">Licença</a> 
+<a href="#licença">Licença</a> 
 </p>
 
 ### funcionalidades
@@ -24,7 +24,7 @@
 ### Demostração da Aplicação
 * Digite o nome da cidade no campo de pesquisa.
 * Clique em pesquisar.
-<br><a href="https://vocal-belekoy-57452d.netlify.app/">Teste a Aplicação</a> 
+<br><a href="https://reliable-pony-99f4dc.netlify.app/">Teste a Aplicação</a> 
 <img src="./w-web.png">
 
 ### Como executar o projeto
