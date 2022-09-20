@@ -59,21 +59,16 @@ function App() {
       setnameCitys("");
 
       Api(
-        `https://api.hgbrasil.com/weather?key=af04c7e1&city_name=rio%20de%20janeiro${checkCityEqual[0]}`, 
+        `https://api.weatherbit.io/v2.0/current?key=01c486ba9ed44f84934735a6789594d9&lang=pt&units=M&city=${checkCityEqual[0]}`, 
         (e)=>{
-          console.log(e);
+          console.log(e.data[0]);
           setweatherData(weather(e));
 
-          switch (e.result.condition_code) {
-            case 27:
-            case 31:
-            case 32:
-            case 23:
-            case 36:
-            case 44:
+          switch (e.data[0].weather.code) {
+            case 800:
+            case 801:
+            case 802:
               setbg("./img/day.png");
-              break;
-            case 48:
               break;
             default:
               setbg("./img/rain.png");
